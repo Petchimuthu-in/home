@@ -1,0 +1,36 @@
+for row in range(15):
+    for col in range(25):
+        # Chimney
+        if 1 <= row <= 4 and 17 <= col <= 18:
+            print("*", end=" ")
+        # Roof
+        elif row == 1 and col == 12:
+            print("*", end=" ")
+        elif row == 2 and 11 <= col <= 13:
+            print("*", end=" ")
+        elif row == 3 and 10 <= col <= 14:
+            print("*", end=" ")
+        elif row == 4 and 9 <= col <= 15:
+            print("*", end=" ")
+        elif row == 5 and 8 <= col <= 16:
+            print("*", end=" ")
+        elif row == 6 and 7 <= col <= 17:
+            print("*", end=" ")
+        # House walls
+        elif 7 <= row <= 13 and (col == 7 or col == 17):
+            print("*", end=" ")
+        # Left Window
+        elif 8 <= row <= 10 and 9 <= col <= 11:
+            print("*", end=" ")
+        # Right Window
+        elif 8 <= row <= 10 and 13 <= col <= 15:
+            print("*", end=" ")
+        # Door
+        elif 10 <= row <= 13 and 11 <= col <= 13:
+            print("*", end=" ")
+        # Ground
+        elif row == 14 and 6 <= col <= 18:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
